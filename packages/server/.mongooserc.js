@@ -6,7 +6,7 @@ loadEnv(process.env.NODE_ENV || 'development', __dirname)
 
 require('ts-node').register({
   disableWarnings: true,
-  transpileOnly: true
+  transpileOnly: false
 })
 
 module.exports = {
@@ -23,6 +23,7 @@ module.exports = {
       useCreateIndex: true,
       useUnifiedTopology: true
     }
+
   },
   'migrations-path': path.join(__dirname, 'mongoose/migrations'),
   'seeders-path': path.join(__dirname, 'mongoose/seeders')
